@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<h1>Some Memorable Movies</h1>
+	
+	<h3><span class="ital">Limbo </span>(Persicketti, 2023)</h3>
+	
+	<div class="sideByside">
+	<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/limbo1.jpg" alt="faceplanted">
+	<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/limbo2.jpg" alt="clean desk">
+	<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/limbo3.jpg" alt="me and kitty">
+	</div>
+	<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illo autem, iure nihil mollitia ipsum cumque consequatur perferendis, natus qui blanditiis eveniet explicabo commodi quae vitae fuga facere. Modi ad quos, cum aliquam quam magni placeat nostrum, non, officiis ipsa reiciendis. Autem perferendis impedit, doloribus, quas vel voluptatibus excepturi ea?</p>
+	
+	<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+
+	
+</body>
+	<script>
+		//limbo~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+		gotoMovie_btn.style.visibility = "hidden";
+	var img01_clicked = false;
+	var img02_clicked = false;
+	var img03_clicked = false;
+	var DTRT_text= document.getElementById ("DTRT_text")
+	var DTRT00= "Limbo is the name of the first short film I made in my Nonfiction Foundation Production class that I took Spring of 2023. I was unemployed at the time, and had just spent an entire winter break struggling to look for a job while my roommate seemed to have herself really put together, and was busy working often. I documented how I'd spend my time at home, cleaning my room and messing around trying to entertain myself alone in what I called unemployment limbo."
+	DTRT_text.innerHTML=DTRT00;
+	
+	function onClick_DTRT_img01(){
+	img01_clicked = true;
+	console.log ("img01_clicked = " + img01_clicked);
+		revealButton();
+	DTRT_text.innerHTML = "The film itself is meant to be as melancholy as it sounds, and this still shows how I ended a long sequence of sorting and transporting a lot of dirty laundry. With chores finished, I'd lounge around in my comfiest clothes and fall asleep, forgetting that my laundry is still in the dryer. It also shows how comfortable I can get at home regardless, which is a positive of spending so much time there.";
+}
+		function onClick_DTRT_img02(){
+			img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+			revealButton();
+			
+	
+			DTRT_text.innerHTML = "I took multiple shots of my belongings as I organized them, this being a still from organizing my desktop. I did a voiceover, but I felt that showing off the different nooks and crannies of my room and both the state they were left in and how I'd prefer them after cleaning spoke more volumes about my life at the time. I really wanted it to be a snapshot of where I was.";
+}
+		function onClick_DTRT_img03(){
+			
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+			revealButton();
+	
+			DTRT_text.innerHTML = "My cat, Zoo Wee Mama, or Zooz for short, is my favorite little creature on the planet, and it would've been inaccurate to not have her in the film as much as she is. She also loves anything moving on a screen--including her own reflection in the camera preview--so I'm able to get cute shots like this where we both are looking to the lens. Sometimes it leads to her swatting at the screen, but I think it's cute, so I usually just coo and laugh.";
+}
+		
+	
+function revealButton(){
+if (img01_clicked && img02_clicked && img03_clicked){
+	console.log ("REVEAL BUTTON");
+	gotoMovie_btn.style.visibility = "visible";
+}
+}
+
+function gotoMovie(){
+	window.open("https://youtu.be/7XBLiYG3axg", "_blank");
+}
+
+	</script>
+</html>
