@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>random</title>
+<link href="css/random.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<div class="sideBySide">
+	<img class="glinda" id="leftImage" onClick="randomizer(event)" src="images/glinda1.jpg" alt="stairwell">
+	<img class="glinda" id="middleImage" onClick="randomizer(event)" src="images/glinda2.jpg" alt="chip">
+	<img class="glinda" id= "rightImage" onClick="randomizer(event)" src="images/glinda3.jpg" alt="bathtime">
+
+	</div>
+	<script>
+	
+		//elements that can change ~~~~~~~~~~~~~
+	var leftImage = document.getElementById("leftImage");
+	var middleImage = document.getElementById("middleImage");
+	var rightImage = document.getElementById("rightImage");
+	// list of imgs in images folder
+
+	var glinda1 = "images/glinda1.jpg";
+	var glinda2 = "images/glinda2.jpg";
+	var glinda3 = "images/glinda3.jpg";
+	var glinda4 = "images/glinda4.jpg";
+	var glinda5 = "images/glinda5.jpg";
+	
+		
+	function randomizer(event){
+		var x = Math.floor(Math.random() * 5) + 1;
+	// console.log("var x = " + x)
+		console.log(event.currentTarget.id);
+		if (x == 1){
+			event.currentTarget.src = glinda1;
+		}
+		if (x == 2){
+			event.currentTarget.src = glinda2;
+		}
+		if (x == 3){
+			event.currentTarget.src = glinda3;
+		}
+		if (x == 4){
+			event.currentTarget.src = glinda4;
+		}
+		if (x == 5){
+			event.currentTarget.src = glinda5;
+		}
+	}
+	</script>
+</body>
+</html>
