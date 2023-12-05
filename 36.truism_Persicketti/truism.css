@@ -1,0 +1,24 @@
+@charset "utf-8";
+#vid {
+    width: 100vw;
+    height: 100vh;
+	object-fit: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.centered_text {
+    position: relative;
+    text-align: center;
+    margin-top: 50vh;
+    justify-content: center;
+}
+#truism {
+    font-style: normal;
+    font-variant: normal;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    font-weight: 100;
+    text-decoration: none;
+    color: #BAB0B0;
+	cursor: default;
+}

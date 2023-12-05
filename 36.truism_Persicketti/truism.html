@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="truism.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div>
+      <video id="vid" controls="controls" muted="muted" autoplay="autoplay" loop="loop" >
+        <source src="video/truism.mp4" type="video/mp4">
+      </video>
+	</div>
+	<div class="centered_text">
+	<h1 id="truism" onmouseOver="onTruismText()" onMouseOut="outTruismText()" onClick="changeVideo()">Being Sure of Yourself Makes You A Fool</h1>	 
+	</div>
+
+	<script>
+		
+		var channel = 1;
+		var pausedAt = 0;
+	//reference to video element
+		var vid = document.getElementById("vid");
+	//each video ref
+		var candle = "video/truism.mp4";
+		var laptop = "video/truism2.mp4";
+		
+		
+		
+	// sound stuff
+		var mySound = new Audio("sound/shepardtone.mp3");
+		
+		function onTruismText(){
+			console.log("clicked truism text");
+			document.getElementById("vid").style.filter = "blur(10px)";
+		}
+		
+		function outTruismText(){
+			console.log("moving out of truism text");
+			document.getElementById("vid").style.filter = "blur(0px)";
+		}
+		function changeVideo(){
+			console.log("works");
+			pausedAt = vid.currentTime;
+			if (channel == 0) {
+				vid.src = candle;
+				channel = 1;
+				vid.currentTime = pausedAt;
+			}
+			else{
+				vid.src = laptop;
+				channel = 0;
+				vid.currentTime = pausedAt;
+				
+			mySound.play();
+			}
+		}
+	</script>
+	</body>
+	
+</html>
