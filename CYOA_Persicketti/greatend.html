@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/CYOA.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="h1">
+
+<h1 id= "#h1" > IMPRESS KITTY </h1>
+
+<div class = "imgCenter">
+  <video controls>
+    <source src="video/treats.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div>  
+<h1> <p id="caption">
+PARTY TIME. YOU GOT THE GREAT END, YOU ARE NOW BESTIES.
+</p>
+</h1>
+</div>
+
+<div id="DIVforButtons" class="sideBySide">
+<p>
+<button id="topBTN" onClick="buttonOne()">back to beginning</button>  
+</p>    
+<p>  
+</p>
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");    
+	
+
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';
+    bottomBTN.style.display = 'none';        
+
+    function whenVideoEnds(e) {
+
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+        bottomBTN.style.display = 'block';
+    }
+        
+
+    function buttonOne() {
+        window.open ('opening.html','_self',false)
+    }
+        
+  
+        
+</script>
+    
+</html>

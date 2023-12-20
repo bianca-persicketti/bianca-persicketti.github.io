@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/CYOA.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="h1">
+
+<h1 id= "#h1" > IMPRESS KITTY </h1>
+
+<div class = "imgCenter">    
+
+<img src="images/death1.jpg" width="500" height="281" alt="angry"/> 
+<img src="images/death2.jpg" width="500" height="281" alt="stillangry"/>
+	 </div>
+
+<div>  
+<h1> <p id="caption">
+Oh no. You really did it now. You're on a death list. You've absolutely humiliated her. Keep one eye open while sleeping tonight.
+</p>
+</h1>
+</div>
+
+<div id="DIVforButtons" class="sideBySide">
+<p>
+<button id="topBTN" onClick="buttonOne()">BACK TO BEGINNING</button>  
+</p>    
+
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var bottomBTN = document.getElementById("bottomBTN"); 
+   
+    var caption = document.getElementById("caption");    
+	
+
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';
+    bottomBTN.style.display = 'none';        
+
+    function whenVideoEnds(e) {
+
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+        bottomBTN.style.display = 'block';
+    }
+        
+
+    function buttonOne() {
+        window.open ('opening.html','_self',false)
+    }
+        
+   
+        
+</script>
+    
+</html>
